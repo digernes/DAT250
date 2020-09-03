@@ -17,4 +17,4 @@ To inspect the variables i used the `ij` interactive scripting tool that comes w
 
 3. To inspect the data that was created: `select * from test.TODO;`. See image below
 
-![Inspecting data](/inspectTable.png)
+![Inspecting data](/images/inspectTable.png)
