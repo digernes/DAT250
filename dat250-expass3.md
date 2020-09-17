@@ -48,6 +48,8 @@ Next I was reading about aggregation and map-reduce. I followed the map-reduce e
 
 The last task was to develop an own operation and execute it. I decided to sort the data by the different days. This could show what days had the most orders, total income per day and how many unique customers made orders a specific day. Maybe there could be some good insight by sorting the data like this. 
 
+#### Map Function
+
 Firstly i made the mapFunction. The key value was the date of the order. (``ord_date``)  
 The value was an object which included the price (``price``) and customer id (``cust_id``) associated with the order. 
 ```
@@ -57,6 +59,8 @@ var mapFunction3 = function() {
    	emit(key, value);
 };
 ```
+
+#### Reduce Function
 
 Next, the reduce function counted unique customers (``unique_customers``) per date, as well as adding the prices together to find the total income (``income``) and counting how many orders were made. 
 
@@ -79,6 +83,8 @@ var reduceFunction3 = function(keyDate, objs) {
 };
 ```
 
+#### Executing the operation
+
 To run in the terminal, first set up the mapReduce operation: 
 
 ```
@@ -89,7 +95,7 @@ db.orders.mapReduce(
  )
  ```
  
- and then to see the result, enter: ``db.map_reduce_example3.find().sort({_id: 1})`` (ordered by date).
+ and then to see the result, enter: ``db.map_reduce_example3.find().sort({_id: 1})`` (sorted by date).
  
  Below is a screenshot of setting up the functions and operation in PowerShell. 
  
