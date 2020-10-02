@@ -1,8 +1,5 @@
 # DAT250: Software Technology Experiment Assignment 5
 
-
-#### Assigment goal
-
 [Link to assignment description](https://github.com/selabhvl/dat250public/blob/master/expassignments/expass4.md)
 
 The goal of this assignment is to make initial experiments with the Spring framework and Spring Boot software technology (spring.io).
